@@ -1,0 +1,496 @@
+/*
+PRO1
+case: Alices Restaurant
+*/
+
+/* Adobe fonts */
+@import url("https://use.typekit.net/vzd5ibg.css");
+/* font-family: 'filicudi-solid', sans-serif; font-weight: 400; font-style: normal; */
+@import url("https://use.typekit.net/vzd5ibg.css");
+/* font-family: 'interface', sans-serif; font-weight: 700; font-style: normal; */
+@import url("https://use.typekit.net/vzd5ibg.css");
+/* font-family: 'myriad-pro', sans-serif; font-weight: 400; font-style: normal; */
+@import url("https://use.typekit.net/ewx8vxc.css");
+/* font-family: 'gautreaux', sans-serif; font-weight: 700; font-style: normal; */
+
+/* Variabler*/
+:root {
+  /* farver */
+  --white: #F2F2F2;
+  --yellow: #f8d5a3;
+  --orange: #D9843B;
+  --darkorange: #BF5630;
+  --brown: #C39E83;
+  --grey: #1B2226;
+  --black: #0C0D12;
+
+  /* whitespace */
+  --whitespace: .5rem;
+
+  /* fonte */
+  --overskrift1: 'filicudi-solid', sans-serif; /* overskrift 1 */
+  --overskrift2: 'interface', sans-serif; /* overskrift 2 */
+  --brødtekst: 'myriad-pro', sans-serif; /* brødtekst */
+  --citat: 'gautreaux', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* baggrund */
+body {
+  background-size:100% auto;
+  background-color: var(--white);
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: var(--overskrift1);
+  margin-top: var(--whitespace);
+  margin-bottom: var(--whitespace);
+  color: var(--black);
+}
+p {
+  font-family: var(--brødtekst);
+  margin-top: var(--whitespace);
+  margin-bottom: var(--whitespace);
+  color: var(--black);
+}
+
+/* Billeder */
+img {
+  width: 100%;
+}
+
+/* Navbar - Selvstudiedag 2 */
+nav li {
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--white);
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item {
+    margin-left: 5rem;
+}
+.nav-link{
+    font-size: 1rem;
+    font-family: var(--overskrift2);
+    color: var(--black);
+}
+.nav-link:hover{
+    color: var(--orange);
+}
+
+/* burgermenu */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--black);
+}
+.navbarmobil,
+#hamburger {
+    display: none;
+}
+
+
+/* header forside*/
+.headerForside {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.headerForside img {
+  opacity: 0.4;
+}
+
+.headerForside h1 {
+  position: absolute;
+  color: var(--black);
+  text-align: center;
+  top: 20%;
+  font-size: 4em;
+}
+
+.headerForside h2 {
+  color: var(--black);
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: auto;
+  font-family: var(--citat);
+}
+
+/* book bord knap */
+.bookBord {
+  position: absolute;
+  top: 80%;
+  color: var(--white);
+  background-color: var(--orange);
+  text-align: center;
+  font-size: 1.5em;
+  font-family: var(--overskrift1);
+  padding: 14px 50px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0px 0px 5px var(--brown);
+  border-radius: 60px;
+}
+
+/* Sæsonens udvalgte menu - Selvstudiedag 2 Spørgsmål ekstra vdr. mouse events */
+.sæsonensUdvalgte {
+  display: flex;
+  justify-content: space-between;
+  gap: 5em;
+  padding: 5em;
+}
+.sæsonensOverskrift {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 1em;
+}
+#menuEtTekst {
+  font-family: var(--brødtekst);
+  font-size: 1.2em;
+  color: var(--black);
+  text-align: center;
+}
+#menuToTekst {
+  font-family: var(--brødtekst);
+  font-size: 1.2em;
+  color: var(--black);
+  text-align: center;
+}
+#menuTreTekst {
+  font-family: var(--brødtekst);
+  font-size: 1.2em;
+  color: var(--black);
+  text-align: center;
+}
+
+.heleSæsonensMenu {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.heleSæsonensMenu a{
+  font-family: var(--overskrift2);
+  font-size: 1.2em;
+  text-decoration: none;
+  color: var(--black);
+}
+.heleSæsonensMenu a:hover {
+  color: var(--orange);
+}
+
+
+/* Åbningstider i dag - Selvstudiedag 4 */
+.AabenIdag {
+  background-color: var(--yellow);
+  height: 150px;
+  width: 100%;
+}
+.AabenIdag h2{
+  text-align: center;
+  font-size: 2em;
+  padding-top: 2rem;
+  color: var(--black);
+}
+.AabenIdag p{
+  text-align: center;
+  font-size: 1.4em;
+  font-family: var(--brødtekst);
+  color: var(--black);
+  margin-top: 1rem;
+}
+
+/* VORES TEAM */
+.voresTeam {
+  display: flex;
+  justify-content: space-between;
+  gap: 5em;
+  padding: 5em;
+}
+#ytplayer {
+  height: 360px;
+  width: 640px;
+}
+.voresTeam p {
+  padding-bottom: 1em;
+}
+
+
+/* footer - Selvstudiedag 1 Spørgsmål 1+2 */
+footer {
+  background-color: var(--black);
+  width: 100%;
+  height: 200px;
+}
+footer p {
+  font-family: var(--brødtekst);
+  color: var(--white);
+  text-align: center;
+}
+#footerInfo {
+  padding-top: 2rem;
+}
+.adresse h3 {
+  color: var(--white);
+}
+
+
+/* Book bord - Selvstudiedag 3 */
+.undersideHeader h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: var(--black);
+}
+.undersideHeader h4 {
+  text-align: center;
+  margin-top: 30px;
+  color: var(--black);
+}
+.undersideHeader p {
+  text-align: center;
+  color: var(--black);
+}
+.undersideHeader {
+  background-color: var(--yellow);
+  padding-bottom: 50px;
+}
+
+#gæster,
+#tidspunkt,
+#radio,
+#lastField {
+  display: none;
+}
+.alleKnapperne {
+  width: 70px;
+  height: 30px;
+  background-color: var(--orange);
+  margin-top: 30px;
+  text-align: center;
+  padding: 5px;
+  font-family: var(--brødtekst);
+  color: var(--black);
+  cursor: pointer;
+}
+#tilbagebtn1,
+#tilbagebtn2,
+#tilbagebtn3,
+#tilbagebtn4 {
+  background-color: var(--black);
+  color: var(--white);
+}
+#tilbagebtn4 {
+  margin-top: 10px;
+}
+.knapperPlacering {
+  display: flex;
+  justify-content: space-between;
+}
+.knapperPlacering p, .btn1Placering p {
+  margin-top: 40px;
+  font-family: var(--brødtekst);
+  color: var(--grey);
+}
+.btn1Placering {
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+legend {
+  font-family: var(--overskrift1);
+  color: var(--black);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+fieldset {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 140px;
+  margin-top: 110px;
+  border: none;
+  font-family: var(--brødtekst);
+  color: var(--black);
+}
+label,
+input,
+.navnskrift {
+  font-size: 1.3rem;
+}
+.bemærkGæster {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: var(--grey);
+}
+#send {
+  width: 70px;
+  height: 30px;
+  background-color: var(--orange);
+  text-align: center;
+  font-family: var(--brødtekst);
+  color: var(--black);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.bemærkLast {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: var(--grey);
+}
+
+/* MENU - Selvstudiedag 5 */
+.sæsonsmenu {
+  background-color: var(--white);
+}
+.menuTing img{
+  width: 450px;
+  height: auto;
+}
+.sæsonsmenu h1 {
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 1em;
+}
+.sæsonsmenu h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-family: var(--citat);
+  margin-top: 2em;
+}
+.menuTing h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: var(--overskrift2);
+  margin-top: 0.7em;
+}
+#forret,
+#hovedret,
+#dessert {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* mobil */
+@media only screen and (max-width: 810px) {
+  /* navbar responsive - Selvstudiedag 2 */
+    .nav-burgermenu {
+      flex-direction: column;
+      padding: 20px;
+    }
+    .nav-item {
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .navbarmobil,
+    #hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    #showBrg {
+      display:none;
+    }
+    .nav-menu {
+      display: none;
+    }
+
+    /* header forside*/
+    .headerForside h1 {
+      top: 10%;
+      font-size: 2em;
+    }
+    .headerForside h2 {
+      top: 30%;
+    }
+
+    /* Sæsonens udvalgte menu - Selvstudiedag 2 Spørgsmål ekstra vdr. mouse events */
+    .sæsonensUdvalgte {
+      flex-flow: column wrap;
+    }
+
+    /* book bord knap */
+    .bookBord {
+      top: 75%;
+      font-size: 1em;
+    }
+
+    /* VORES TEAM */
+    .voresTeam {
+      flex-direction: column;
+      padding: 0;
+      gap: 2em;
+      padding-bottom: 1em;
+    }
+    #ytplayer {
+      height: 180px;
+      width: 320px;
+    }
+    #synlig {
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 2em;
+    }
+    .voresTeam h2,
+    .voresTeam p {
+      text-align: center;
+      padding-right: 1em;
+      padding-left: 1em;
+    }
+
+    /* BOOK BORD */
+    fieldset {
+      width: 80%;
+      margin-bottom: 100px;
+      margin-top: 80px;
+    }
+
+    /* MENU */
+    #forret,
+    #hovedret,
+    #dessert {
+      flex-direction: column;
+      padding: 20px;
+    }
+    .menuTing img{
+      width: 100%;
+      height: auto;
+    }
+
+
+}

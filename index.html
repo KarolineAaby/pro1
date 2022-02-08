@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Alice's Restaurant</title>
+</head>
+<body>
+  <!-- navigationsbar com--> <!-- Selvstudiedag 2 Spørgsmål 1 -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Alices Restaurant logo" style="width: auto; height:55px;"></a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="menu.html" class="nav-link">MENU</a>
+      </li>
+      <li class="nav-item">
+        <a href="bookbord.html" class="nav-link">BOOK BORD</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">ÅBNINGSTIDER</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">OM OS</a>
+      </li>
+    </ul>
+    <!-- navigationsbar mobil-->
+    <div id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <nav class="navbarmobil">
+    <ul id="showBrg">
+      <li class="nav-item">
+        <a href="menu.html" class="nav-link">MENU</a>
+      </li>
+      <li class="nav-item">
+        <a href="bookbord.html" class="nav-link">BOOK BORD</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">ÅBNINGSTIDER</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">OM OS</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- content -->
+  <header class="headerForside">
+    <img src="images/headerforside-kopi.jpg" alt="Tallerken med mad fra Alice's Restaurant" style="width: 100%; height: auto;">
+    <h1>Alices Restaurant</h1>
+    <h2 id="citat"></h2> <!-- Selvstudiedag 1 Spørgsmål 4-->
+    <a class="bookBord" href="bookbord.html">Book bord</a>
+  </header>
+
+  <!-- Selvstudiedag 2 Spørgsmål ekstra vdr. mouse events-->
+  <h2 class="sæsonensOverskrift">Sæsonens udvalgte</h2>
+  <section class="sæsonensUdvalgte">
+    <article>
+      <img id="menuEt" src="images/oksemørbrad.jpg" alt="#">
+      <div id="menuEtTekst"></div>
+    </article>
+    <article>
+      <img id="menuTo" src="images/laks.jpg" alt="#">
+      <div id="menuToTekst"></div>
+    </article>
+    <article>
+      <img id="menuTre" src="images/kylling.jpg" alt="#">
+      <div id="menuTreTekst"></div>
+    </article>
+  </section>
+
+  <section class="heleSæsonensMenu">
+    <article><a href="menu.html">Se hele sæsonens menuen →</a></article>
+  </section>
+
+  <section class="AabenIdag">
+    <article>
+      <h2>Åbningstider i dag</h2>
+      <p id="infoAaben"></p>
+    </article>
+  </section>
+
+  <section class="voresTeam">
+    <article id="synlig"> <!-- end slipsum code -->
+         <div id="ytplayer"></div> <!-- Selvstudiedag 4 -->
+    </article>
+    <article>
+      <h2>Vores team</h2>
+      <p>Vores medarbejdere i Alices Restaurant er et specialiseret team, bestående af seks af topuddannede indenfor branchen, som står glædeligt klar når du træder ind af døren.</p>
+      <p id="medarbejderListe"></p> <!-- Selvstudiedag 1 Spørgsmål 3 -->
+    </article>
+  </section>
+
+  <!-- Selvstudiedag 1 Spørgsmål 1 + 2 -->
+  <footer>
+    <p id="footerInfo"></p>
+  </footer>
+
+  <!-- scripts -->
+  <script src="js/js.js"></script>
+</body>
+</html>

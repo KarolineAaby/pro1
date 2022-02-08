@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Sæsonens Menu</title>
+</head>
+
+<body>
+  <!-- navigationsbar com--> <!-- Selvstudiedag 2 Spørgsmål 1 -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Alices Restaurant logo" style="width: auto; height:55px;"></a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="menu.html" class="nav-link">MENU</a>
+      </li>
+      <li class="nav-item">
+        <a href="bookbord.html" class="nav-link">BOOK BORD</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">ÅBNINGSTIDER</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">OM OS</a>
+      </li>
+    </ul>
+    <!-- navigationsbar mobil-->
+    <div id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <nav class="navbarmobil">
+    <ul id="showBrg">
+      <li class="nav-item">
+        <a href="menu.html" class="nav-link">MENU</a>
+      </li>
+      <li class="nav-item">
+        <a href="bookbord.html" class="nav-link">BOOK BORD</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">ÅBNINGSTIDER</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">OM OS</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- content -->
+  <header class="undersideHeader">
+    <img src="images/headermenu.jpg" alt="Tallerken med mad fra Alice's Restaurant" style="width: 100%; height: auto;">
+    <h1>Sæsonens menu</h1>
+    <h4>Vores menu indeholder noget for enhver smag.</h4>
+    <p>Sæsonens menu byder på forskellige gastronomiske oplevelser afstemt med årstiden.<br>
+       Du er naturligvis velkommen til at blande som du har lyst!</p>
+    <p>Har du spørgsmål angående allergener, så kontakt venligst personalet.</p>
+  </header>
+
+
+  <!-- Selvstudiedag 5 -->
+  <section class="sæsonsmenu">
+    <article>
+      <h1>Forårs menuen 2022</h1>
+    </article>
+    <article>
+      <h2>Forretter</h2>
+      <div id="forret"></div>
+    </article>
+    <article>
+      <h2>Hovedretter</h2>
+      <div id="hovedret"></div>
+    </article>
+    <article>
+      <h2>Desserter</h2>
+      <div id="dessert"></div>
+    </article>
+  </section>
+
+  <!-- Selvstudiedag 1 Spørgsmål 1 + 2 -->
+  <footer>
+    <p id="footerInfo"></p>
+  </footer>
+
+
+
+  <script>
+    // nu skal vi bruge vores JSON - indsætter JSON indholdet: menu = `INDSÆT HER`;
+    // det her er et array
+    menu = `{
+      "menu": [
+        {
+          "id": 1,
+          "ret": "forret",
+          "titel": "Hokkaidosuppe",
+          "beskrivelse": "Cremet hokkaidosuppe på græskar med ristede mandler.",
+          "pris": 80,
+          "foto": "soup.jpg"
+        },
+        {
+          "id": 2,
+          "ret": "forret",
+          "titel": "Ballotine af kylling",
+          "beskrivelse": "Ballotine af kylling med citron og peanuts.",
+          "pris": 89,
+          "foto": "kylling.jpg"
+        },
+        {
+          "id": 3,
+          "ret": "hovedret",
+          "titel": "Mørbrad med kantarelsauce",
+          "beskrivelse": "Oksemørbrad med kantarelsauce og brøndkarse.",
+          "pris": 220,
+          "foto": "oksemørbrad.jpg"
+        },
+        {
+          "id": 4,
+          "ret": "hovedret",
+          "titel": "Frisk laks med tabouleh",
+          "beskrivelse": "Stegt laks med den friske og fyldige tabouleh bulgursalat.",
+          "pris": 190,
+          "foto": "laks.jpg"
+        },
+        {
+          "id": 5,
+          "ret": "dessert",
+          "titel": "Kardemommeis",
+          "beskrivelse": "Frisk kardemommeis med passionsmousse.",
+          "pris": 69,
+          "foto": "kardemomme.jpg"
+        },
+        {
+          "id": 6,
+          "ret": "dessert",
+          "titel": "Chokolademousse bombe",
+          "beskrivelse": "Chokolademousse bombe m. sæsonens friske bær på sprød nøddebund.",
+          "pris": 69,
+          "foto": "chokolademousse.png"
+        }
+      ]
+    }`;
+
+    const xxx = JSON.parse(menu);
+    // console.log(xxx); // få det hele frem i console
+    console.log(xxx.menu[0].titel); //få titlen frem på nr. 0 i menuen fra array
+
+    // loop der henter hele arrayet
+  for (let i=0; i<xxx.menu.length; i++){
+
+    if( xxx.menu[i].ret == 'forret' ){
+      console.log('Foretter\n\n' + xxx.menu[i].titel)
+      forret.innerHTML += `
+        <div class="menuTing">
+          <h2> ${xxx.menu[i].titel} </h2>
+            <img src="images/${xxx.menu[i].foto}" alt="${xxx.menu[i].titel}">
+            <p> ${xxx.menu[i].beskrivelse} </p>
+          <p> ${xxx.menu[i].pris} kr. </p>
+        </div>
+      `
+    }
+
+    if( xxx.menu[i].ret == 'hovedret' ){
+      console.log('Hovedretter\n\n' + xxx.menu[i].titel)
+      hovedret.innerHTML += `
+        <div class="menuTing">
+          <h2> ${xxx.menu[i].titel} </h2>
+            <img src="images/${xxx.menu[i].foto}" alt="${xxx.menu[i].titel}">
+            <p> ${xxx.menu[i].beskrivelse} </p>
+          <p> ${xxx.menu[i].pris} kr. </p>
+        </div>
+      `
+    }
+
+    if( xxx.menu[i].ret == 'dessert' ){
+      console.log('Desserter\n\n' + xxx.menu[i].titel)
+      dessert.innerHTML += `
+        <div class="menuTing">
+          <h2> ${xxx.menu[i].titel} </h2>
+            <img src="images/${xxx.menu[i].foto}" alt="${xxx.menu[i].titel}">
+            <p> ${xxx.menu[i].beskrivelse} </p>
+          <p> ${xxx.menu[i].pris} kr. </p>
+        </div>
+      `
+    }
+}
+
+// navbar - Selvstudiedag 2 Spørgsmål 4
+let hide = true; // global
+
+// hide or show
+let hideShow = function(){
+
+  if (hide == true) {
+    document.getElementById('showBrg').style.display = 'block';
+    hide = false;
+  } else {
+    document.getElementById('showBrg').style.display = 'none';
+    hide = true;
+  }
+
+}
+
+// detect click
+hamburger.addEventListener('click', hideShow);
+
+
+// Selvstudiedag 1 Spørgsmål 1+2
+// globale variabler
+let d = new Date(); // kan genbruges andre steder
+let uge = ['søndag','mandag','tirsdag','onsdag','torsdag','fredag','lørdag'];
+let maaneder = ['januar','februar','marts','april','maj','juni','juli','august','september','oktober','november','december'];
+
+// footer som objekt
+const info = {
+  author: 'Karoline Aaby', // Spørgsmål 1
+  dag: uge[ d.getDay() ],
+  maaned: maaneder[ d.getMonth() ],
+  dagImaaned: d.getDate(),
+  aar: d.getFullYear(),
+  time: d.getHours(),
+  minut: d.getMinutes(),
+  restaurant: 'Alice\'s Restaurant', // Spørgsmål 2
+  adresse: 'Volden 234 <br>8000 Aarhus C',
+  telefon: '+45 56 60 98 67',
+  // Metoder
+  skrivTilFooter: function() {
+    footerInfo.innerHTML += `
+      <br><p>
+        &copy;
+        ${this.author}
+        ${this.dag}
+        ${this.dagImaaned}.
+        ${this.maaned}
+        ${this.aar}.
+      </p>
+    `;
+  },
+  skrivAdresse: function() {
+    footerInfo.innerHTML += `
+      <div class="adresse">
+        <h3>${this.restaurant}</h3>
+        <p>
+          ${this.adresse}<br>
+          ${this.telefon}
+        </p>
+      </div>
+    `
+  }
+}
+
+info.skrivAdresse(); // Spørgsmål 2
+info.skrivTilFooter(); // Spørgsmål 1
+
+
+
+
+  </script>
+</body>
+</html>
